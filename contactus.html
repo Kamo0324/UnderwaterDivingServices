@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Underwater Diving Services</title>
+    <link rel="icon" type="image/x-icon" href="image/png/Icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<ul class="navbar">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="boatRaisings.html">Boat Raisings</a></li>
+    <li><a href="searchAndRecovery.html">Search and Recovery </a></li>
+    <li><a href="underwaterDockWork.html">Underwater Dock Work</a></li>
+    <li><a href="contactus.html" class="active">Contact Us</a></li>
+    <li class="right"><img src="image/png/Logo.png" alt="UDS Logo"></li>
+</ul>
+<body>
+    <div class="twoColumn">
+        <h1>Get in touch now:</h1>
+        <h3><a href="tel:8128030179">812 803 0179</a></h3> <!-- needs actual phone link -->
+        <h3><a href="mailto:contact@underwaterdivingservices.com">contact@underwaterdivingservices.com</a></h3> <!--needs email to be set up-->
+        <h3>Expect Response within 24 hours</h3>
+    </div> 
+    <div class="twoColumn" style="display: none;">
+        <h1>Contact us:</h1>
+        <form>
+
+        <select id="formSelector" name="workoptions">
+            <option value="SN">Something New</option>
+            <option value="BR">Boat Raising</option>
+            <option value="SR">Search and Recovery</option>
+            <option value="DW">Underwater Dock Work</option>
+        </select>
+        <div id="BR" class="formSection" style="display:none;">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone"><br>
+            <label for="length">Boat Length:</label><br>
+            <input type="text" id="length" name="length"><br>
+            <label for="type">Boat Type:</label><br>
+            <input type="text" id="type" name="type"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </div>
+        <div id="SR" class="formSection" style="display:none;">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone"><br>
+            <label for="item">What are we looking for:</label><br>
+            <input type="text" id="item" name="item"><br>
+            <label for="area">Rough Search Area:</label><br>
+            <input type="text" id="area" name="area"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </div>
+        <div id="DW" class="formSection" style="display:none;">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </div>
+        <div id="SN" class="formSection" style="display:block;">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            // Get the dropdown element and all form sections
+            const selectElement = document.getElementById('formSelector');
+            const formSections = document.querySelectorAll('.formSection');
+
+                // Add an event listener for the 'change' event
+                selectElement.addEventListener('change', function() {
+                    const selectedValue = this.value;
+
+                    // Hide all form sections first
+                    formSections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+
+                    // Show the selected section if a valid value is chosen
+                    if (selectedValue && selectedValue !== "") {
+                        const selectedSection = document.getElementById(selectedValue);
+                        if (selectedSection) {
+                        selectedSection.style.display = 'block';
+                        }
+                    }
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

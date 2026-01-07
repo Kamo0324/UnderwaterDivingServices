@@ -1,0 +1,101 @@
+body {
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+h1 {
+  font-size: 5vw;
+}
+h2 {
+  font-size: 4vw;
+}
+h3 {
+  font-size: 3vw;
+}
+p {
+  font-size: 2vw;
+}
+
+h3.bar {
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: red;
+}
+
+ul.navbar li {
+  float: left;
+}
+
+ul.navbar li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 3vw 2vw;
+  text-decoration: none;
+  font-size: 2vw;
+}
+
+ul.navbar li a:hover {
+  background-color: darkred;
+}
+
+ul.navbar li a.active {
+  background-color: lightseagreen;
+}
+
+ul.navbar li.right {
+    float: right;
+}
+
+ul.navbar li img {
+    display: block;
+    height: 5vw;
+    width: auto;
+    padding: 5px;
+}
+
+div.twoColumn {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 500px) {
+  div.gallery-item {
+    margin: .3%;
+    border: .5% solid #ccc;
+    width: 32.70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  div.gallery-item {
+    margin: .25%;
+    border: .5% solid #ccc;
+    width: 49%;
+  }
+
+  p {
+    font-size: 3vw;
+  }
+}
+
+div.gallery-item img {
+  width: 100%;
+  height: auto;
+}
