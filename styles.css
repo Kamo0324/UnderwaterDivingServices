@@ -1,6 +1,7 @@
 body {
     background-color: whitesmoke;
     margin: 0;
+    
 }
 
 h1 {
@@ -11,12 +12,13 @@ h2 {
 }
 h3 {
   font-size: 3vw;
+  font-weight: normal;
 }
 p {
   font-size: 2vw;
 }
 
-h3.bar {
+h3.bar, h2.bar {
   background-color: red;
   color: white;
   padding: 10px;
@@ -98,4 +100,9 @@ div.gallery {
 div.gallery-item img {
   width: 100%;
   height: auto;
+}
+
+div.margins {
+  margin-left: 3vw;
+  margin-right: 3vw;
 }
