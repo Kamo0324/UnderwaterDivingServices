@@ -221,8 +221,38 @@ ul.navbar li a.active {
   color: #334e68;
 }
 
+
 .services-section {
   margin-top: 3rem;
+}
+
+.section-header p {
+  margin: 0;
+  color: #334e68;
+  max-width: 42rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  box-shadow: 0 16px 40px rgba(15, 46, 84, 0.08);
+  border: 1px solid rgba(15, 46, 84, 0.08);
+}
+
+.service-card h3 {
+  margin-top: 0;
+}
+
+.service-card p {
+  color: #334e68;
 }
 
 .section-header h2 {
